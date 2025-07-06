@@ -1,17 +1,51 @@
-# BERT_phishing_email_detector
+# AI-Powered Email Threat Detection Using BERT and FAISS
 
-This is Zhengxiao Sun's final Project.
+📌 Overview
 
-All mandatory files are included in this zip file.
+This project presents an AI-driven approach to detect email threats (such as spam and phishing) by leveraging cutting-edge Natural Language Processing (NLP) and similarity search tools. It combines the semantic understanding capabilities of BERT with the scalable retrieval power of FAISS, and wraps everything in a user-friendly Streamlit web interface.
 
-Because of the size of 'model.safetensors' exceeds 1Gb, and the limitation of submission on Courselink is 1 Gb. So, I could not compress my model to a zip file and submit it. I uploaded it to a Google Drive and make it public so you can access and download it on your own computer.
+📐 Architecture
+  •	Dataset Preprocessing: Cleans raw email content and formats it for model input.
+	•	Model Training: Fine-tunes bert-large-uncased on labeled phishing datasets.
+	•	Threat Detection: Uses BERT embeddings and optional FAISS similarity for classification.
+	•	Web Deployment: Implements an interactive interface via Streamlit for public access.
 
-https://drive.google.com/drive/folders/14Ige-84bCCJdV8L3MFnZsGi3D3zRx_0Y?usp=drive_link
+📁 Directory Structure
+├── app.py                  # Streamlit frontend
+├── model_training.ipynb    # BERT fine-tuning notebook
+├── data_preprocessing.py   # Preprocessing script
+├── dataset/                # Raw and cleaned data
+├── saved_model/            # Fine-tuned BERT model
+├── faiss_index/            # FAISS index files (optional)
+└── README.md
 
-Download it and put it under the path of other files.
+📊 Datasets
+1.	Training: Kaggle Phishing Emails
+2.	Testing: University of Twente Phishing Validation Dataset
 
-If you want to run the Steramlit front-end on your own. 
-First, please make sure install all the packages in requirements.txt.
-Then, type 'streamline run app.py' on your own develop environment, such as Visual Studio Code.
+🧠 Model
+	•	BERT (bert-large-uncased) from HuggingFace
+	•	Trained with:
+	•	batch_size = 16
+	•	Mixed precision (fp16) on Colab GPUs
+	•	Early stopping to avoid overfitting
 
-Please let me know if you can not run the code.
+Performance:
+Metrice   |  Value    |
+----------------------|
+Accuracy  |  99.83%   |
+----------------------|
+Precision |  99.78%   |
+----------------------|
+Recal     |  99.71%   |
+----------------------|
+FPR       |  0.11%    |
+-----------------------
+
+🙋‍♂️ Author
+Zhengxiao Sun
+University of Guelph
+
+
+
+
