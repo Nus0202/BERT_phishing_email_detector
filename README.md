@@ -4,10 +4,6 @@
 
 This project presents an AI-driven approach to detect email threats (such as spam and phishing) by leveraging cutting-edge Natural Language Processing (NLP) and similarity search tools. It combines the semantic understanding capabilities of **BERT** with the scalable retrieval power of **FAISS**, and wraps everything in a user-friendly **Streamlit** web interface.
 
-## 🔍 Motivation
-
-Traditional rule-based spam filters often fail to keep up with evolving tactics. This project tackles the challenge using a semantic understanding pipeline to catch subtle and complex threats in email content.
-
 ---
 
 ## 📐 Architecture
